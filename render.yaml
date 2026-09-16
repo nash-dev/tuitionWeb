@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: codeForVideo
+    name: tuitionWeb
     runtime: static
     buildCommand: "true"
     publishDir: "."
