@@ -12,26 +12,28 @@
 <button onclick="setPlaySpeed()" type="button">Set video to be play in slow motion</button>
 <button onclick="increase()" type="button">Increase Speed+</button>
 <button onclick="decrease()" type="button">Decrease Speed-</button>
+
 <script>
+// Correctly reference the video element
 var x = document.getElementById("myVideo");
 
 function getPlaySpeed() { 
-  alert(x.defaultPlaybackRate);
+  alert(x.playbackRate); // Changed to playbackRate to show current speed
 } 
 
 function setPlaySpeed() { 
-  x.defaultPlaybackRate =2;
-  x.load();
+  x.playbackRate = 0.5; // Changed to 0.5 for actual slow motion
 } 
-video.load();
-function increase() {
-        x.playbackRate += 1;
-    }
-function decrease() {
-        if (x.playbackRate > 1)
-            x.playbackRate -= 1;
-    }
 
+function increase() {
+  x.playbackRate += 0.5; // Increments smoothly by 0.5
+}
+
+function decrease() {
+  if (x.playbackRate > 0.5) {
+    x.playbackRate -= 0.5; // Decrements smoothly down to 0.5 minimum
+  }
+}
 </script> 
 
 </body> 
