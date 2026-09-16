@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: my-plain-html-site
+    name: codeForVideo
     runtime: static
     buildCommand: "true"
     publishDir: "."
